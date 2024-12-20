@@ -2,7 +2,7 @@
 
 ***Něco o mně***
 
-Programuji více než dva roky v BATCHI a značkovacím jazyce MarkDown, jeden rok v HTML, půl roku v CSS a tři měsíce v JavaScriptu. Programuji Webové stránky a různé vylepšení v Batchi pro Windows.
+Programuji více než dva roky v BATCHI a značkovacím jazyce MarkDown, jeden rok v HTML, půl roku v CSS a tři měsíce v JavaScriptu. Programuji Webové stránky a různé vylepšení v Batchi pro Windows. 
 
 ***Varování***
 
