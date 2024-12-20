@@ -14,4 +14,4 @@ Ano, mám web. sice na docela špatném hostingu ale mě stačí pokud stránka 
 
 ***INFORMACE***
 
-Tento GitHub je poměrně nedodělaný. Pokud zde oběvíte jakoukoliv chybu neváhejte a napište mi na e-mail programzelva@gmail.com
+Tento GitHub je poměrně nedodělaný. Pokud zde bude nějaká zip složka, klíč je *programzelva* Pokud zde oběvíte jakoukoliv chybu neváhejte a napište mi na e-mail programzelva@gmail.com
