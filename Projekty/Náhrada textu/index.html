@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nahrazení textu</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Boxicons -->
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Tlačítko pro přepínání režimů -->
+    <button id="theme-toggle" class="theme-btn">
+        <i id="theme-icon" class="bx bx-moon"></i>
+    </button>
+
+    <div class="container">
+        <h1>Nahrazení textu</h1>
+        <textarea id="text" rows="10" placeholder="Vložte text..."></textarea>
+        <div id="replacements">
+            <div class="replacement">
+                <input type="text" class="find" placeholder="Hledaný výraz">
+                <input type="text" class="replace" placeholder="Náhrada">
+            </div>
+        </div>
+        <button onclick="addReplacement()">Přidat další nahrazení</button>
+        <button onclick="replaceText()">Nahradit</button>
+        <pre id="result"></pre>
+    </div>
+
+    <script>
+        // Přidání přepínání režimů
+document.getElementById('theme-toggle').addEventListener('click', () => {
+    const body = document.body;
+    const themeIcon = document.getElementById('theme-icon');
+
+    // Přepínání tříd pro světlý/tmavý režim
+    body.classList.toggle('light-mode');
+
+    // Změna ikonky
+    if (body.classList.contains('light-mode')) {
+        themeIcon.classList.replace('bx-moon', 'bx-sun');
+    } else {
+        themeIcon.classList.replace('bx-sun', 'bx-moon');
+    }
+});
+
+// Původní funkce pro nahrazení textu
+let replacementCount = 1;
+
+function addReplacement() {
+    if (replacementCount < 10) {
+        const replacements = document.getElementById('replacements');
+        const newReplacement = document.createElement('div');
+        newReplacement.classList.add('replacement');
+        newReplacement.innerHTML = `
+            <input type="text" class="find" placeholder="Hledaný výraz">
+            <input type="text" class="replace" placeholder="Náhrada">
+        `;
+        replacements.appendChild(newReplacement);
+        replacementCount++;
+    }
+}
+
+function replaceText() {
+    let text = document.getElementById('text').value;
+    const finds = document.querySelectorAll('.find');
+    const replaces = document.querySelectorAll('.replace');
+
+    finds.forEach((findInput, index) => {
+        const find = findInput.value;
+        const replace = replaces[index].value;
+        text = text.split(find).join(replace);
+    });
+
+    document.getElementById('result').innerText = text;
+}
+
+    </script>
+</body>
+</html>
