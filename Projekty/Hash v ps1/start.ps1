@@ -1,0 +1,1 @@
+Start-Process powershell -ArgumentList '-NoExit', '-Command', "& { .\hash.ps1 }"
