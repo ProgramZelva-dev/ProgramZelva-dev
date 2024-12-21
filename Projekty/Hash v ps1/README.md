@@ -1,4 +1,4 @@
-##Hashovací algoritmus v Powershell  
+##Hashovací algoritmus v Powershell##  
 
 *Co to dělá*  
 Pokud uživatel zadá nějaký vstup, zmáčkne na enter a zadá algoritmus jako třeba md5 a zmáčkne enter na klávesnici program vyhodí hash.
